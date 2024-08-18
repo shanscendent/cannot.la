@@ -1,0 +1,9 @@
+baseURL = 'https://cannot.la/'
+languageCode = 'en-us'
+title = 'Cannot Lah'
+theme = 'magick'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

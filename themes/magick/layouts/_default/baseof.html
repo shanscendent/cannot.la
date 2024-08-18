@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/css/magick.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/" style="text-decoration: none;">{{ .Site.Title }}</a></h1>
+        <p style="text-align: center; margin-top:-2.3rem; margin-bottom:-0.2rem; margin-left:-15rem; font-size: 1.4rem">by <a href="https://github.com/shanscendent/" target="_blank">shanscendent</a></p>
+        <nav>
+            <ul>
+              <li><a href="/is">About</a></li>
+              <li><a href="/says">Blog</a></li>
+              <li><a target="_blank" href="https://github.com/shanscendent">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    <footer>
+        <p>© {{ now.Format "2006" }} {{ .Site.Title }}, css by <a target="_blank" href="https://css.winterveil.net/">winterveil</a></p>
+    </footer>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

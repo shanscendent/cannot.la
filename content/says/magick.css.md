@@ -4,7 +4,7 @@ date = 2024-08-18T11:15:38+08:00
 draft = false
 +++
 
-Recreated _some_ of the [magick.css](https://css.winterveil.net/) page in hugo markdown for reference. TODO: Move tedious stuff to hugo shortcodes
+Recreated _some_ of the [magick.css](https://css.winterveil.net/) page in [hugo markdown](https://github.com/shanscendent/cannot.la/blob/main/content/says/magick.css.md) for reference. TODO: Move tedious stuff to hugo shortcodes
 
 <blockquote>
 In the grand compendium of universal knowledge, it is universally acknowledged that the scribbles of a wizard not only transcend the mundane but are, without a shadow of a doubt, the most exhilarating form of notation known to humanoid kind. For who could resist the allure of a well-placed spell in the margins?  

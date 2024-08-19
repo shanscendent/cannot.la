@@ -1,0 +1,9 @@
+{{ $arg := .Params }}
+
+{{ if (index $arg 0) }}
+  <span class="sidenote">{{ index $arg 0 | markdownify }}</span>
+{{ else if .Inner }}
+  <span class="sidenote">{{.Inner | markdownify }}</span>
+{{ else }}
+  <span class="sidenote-anchor"></span>
+{{ end }}

@@ -1,7 +1,10 @@
 {{ define "main" }}
 <article>
     <section>
-    <h1>{{ .Title }}</h2>
+        <h1>{{ .Title }}</h2>
+            <small>{{ .Date.Format "January 2, 2006" }}{{ if ne (.Date.Format "January 2, 2006") (.Lastmod.Format "January 2, 2006") }}
+                , updated {{ .Lastmod.Format "January 2, 2006" }}
+            {{ end }}</small>
         <div>
             {{ .Content }}
         </div>

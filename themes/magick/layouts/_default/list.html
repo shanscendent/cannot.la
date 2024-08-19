@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h2>{{ .Title }}</h2>
 <ul>
-    {{ range .Pages }}
+    {{ range .RegularPagesRecursive }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
 </ul>

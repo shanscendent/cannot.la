@@ -5,7 +5,6 @@
             <small>{{ .Date.Format "January 2, 2006" }}{{ if ne (.Date.Format "January 2, 2006") (.Lastmod.Format "January 2, 2006") }}
                 , updated {{ .Lastmod.Format "January 2, 2006" }}
             {{ end }}</small>
-        <h2>{{ .Lastmod }}</h2>
         <div>
         {{ .Content }}
         </div>

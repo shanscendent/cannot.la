@@ -22,6 +22,7 @@ To get started with setting up this Hugo site, follow these steps:
 hugo
 hugo --minify
 hugo server -D
+hugo server --disableFastRender --gc
 hugo new says/something.md
 hugo config
 ```

@@ -39,3 +39,5 @@ I'm also using it for a bunch of subdomains, like one to point people to other s
 ### Content
 - Developer profile page, with a resume link
 - Hobby pages
+- Network
+  - Write CSS to add a grid in

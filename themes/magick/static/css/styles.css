@@ -1,0 +1,27 @@
+.image-bw {
+    filter: grayscale(1) contrast(1) brightness(1);
+    transition: filter 0.5s ease;
+    /* mix-blend-mode: multiply; */
+}
+
+.image-bw:focus,
+.image-bw:hover {
+    filter: grayscale(0) contrast(1) brightness(1); /* Remove the grayscale on hover */
+    /* mix-blend-mode: multiply; */
+}
+
+.button-link {
+    background-color: transparent; /* 1 */
+    color: var(--fg); /* 1 */
+    padding: 20px; /* 2 */
+    margin-top: 1.6rem; /* 3 */
+    border: 1px solid var(--fg); /* 4 */
+    cursor: pointer; /* 5 */
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.center-text {
+    text-align: center; /* Center text */
+}

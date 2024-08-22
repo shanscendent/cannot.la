@@ -13,7 +13,7 @@ I settled on using [Hugo](https://gohugo.io/) as the SSG and [magick.css](https:
 ### Design considerations
 - Fast
   - Static site
-  - No JS (except for pages that need it) 
+  - No JS (except for pages that need it, or maybe optional site search in the future)
 - Auto dark mode 
   - if you're using a mostly B&W theme you can add a media query to invert colors in your CSS{{< sidenote />}}, but magick.css has it covered {{< sidenote >}}https://yihui.org/en/2023/09/dark-mode/{{< /sidenote >}}
 - Easy to write posts for
@@ -28,16 +28,19 @@ I'm also using it for a bunch of subdomains, like one to point people to other s
 
 ## Todos
 ### Site
-- Fix the font for code blocks
-  - The magick.css font doesn't load properly for some reason, it defaults to using a monospace system font that doesn't fit the theme
-- Fix font for content formatted in `<pre>` tags
-- Properly revamp layout templates
-  - this should probably fix the weird behaviour where pages don't render properly after I edit the templates and forces me to save everything again
+- Fix fonts
+  - Fix the font for code blocks
+    - The magick.css font doesn't load properly for some reason, it defaults to using a monospace system font that doesn't fit the theme
+  - Fix font for content formatted in `<pre>` tags
 - Increase the loading speed
-  - maybe do stuff like minification, serve inline css, try TCP fast open, etc?
-- Add searchable tags to posts
+  - Maybe do stuff like minification, serve inline css, try TCP fast open, etc?
+- Site search (Ctrl + K?)
+  - Add tags to posts (LLM?)
+- Fix hugo server not reloading everything after editing one file
+  - There's this weird behaviour where pages don't render properly after I edit the templates and forces me to save everything again.
+  - I've since resorted to having a `touch.sh` file which doesn't actually `touch`, but `echo`s a newline to every single file in content/ (including images!) and removes it again, which makes Hugo actually render stuff properly after you do that. It's a bit annoying to run it every update though, but oh well
 ### Content
 - Developer profile page, with a resume link
 - Hobby pages
-- Network
-  - Write CSS to add a grid in
+- Network page
+  - Write CSS to add 2 columns on mobile, 3-4 on desktop?

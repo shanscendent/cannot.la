@@ -1,6 +1,6 @@
 +++
 title = 'Photographer'
-date = 2024-08-18T11:23:55+08:00
+date = 2024-08-18
 draft = false
 +++
 

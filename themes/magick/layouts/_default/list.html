@@ -7,10 +7,13 @@
             <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
             {{ end }}
         </ul>
-        <br>
-        <div>
-            {{ .Content }}
-        </div>
     </section>
+    {{ if .Scratch.Get "useSections" }}
+    {{ partial "content-sections.html" . }}
+    {{ else }}
+        <section>
+            {{ .Content }}
+        </section>
+    {{ end }}
 </article>
 {{ end }}

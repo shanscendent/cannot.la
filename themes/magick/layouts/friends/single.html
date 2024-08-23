@@ -2,7 +2,13 @@
 <article>
     <section>
         <h1>{{ .Title }}</h2>
-        {{ .Content }}
     </section>
+    {{ if .Scratch.Get "useSections" }}
+        {{ partial "content-sections.html" . }}
+    {{ else }}
+        <section>
+            {{ .Content }}
+        </section>
+    {{ end }}
 </article>
 {{ end }}

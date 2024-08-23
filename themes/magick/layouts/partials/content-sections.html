@@ -1,0 +1,12 @@
+{{ $content := .Content }}
+{{ $sections := split $content "<h2" }}
+
+{{ range $i, $sec := $sections }}
+    <section>
+        {{ if eq $i 0 }}
+            {{ $sec | safeHTML }}
+        {{ else }}
+            {{ printf "<h2 %s" $sec | safeHTML }}
+        {{ end }}
+    </section>
+{{ end }}

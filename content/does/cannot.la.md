@@ -1,7 +1,7 @@
 +++
 title = 'My Own Personal Site'
 slug = 'my-own-personal-site'
-date = 2024-08-18T10:19:10+08:00
+date = 2024-08-18
 draft = false
 +++
 

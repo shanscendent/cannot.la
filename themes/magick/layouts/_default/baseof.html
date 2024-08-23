@@ -22,11 +22,13 @@
         </nav>
     </header>
     <main>
+        {{ $useSections := .Params.useSections | default true }}
+        {{ .Scratch.Set "useSections" $useSections}}
         {{ block "main" . }}{{ end }}
+        <footer>
+            <hr>
+            <p>© {{ now.Format "2006" }} shanscendent</p>
+        </footer>
     </main>
-    <footer>
-        <p>© {{ now.Format "2006" }} {{ .Site.Title }}</p>
-    </footer>
-    <script src="/js/scripts.js"></script>
 </body>
 </html>

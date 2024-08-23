@@ -1,6 +1,6 @@
 +++
 title = 'Cannot Lah'
-date = 2024-08-18T11:15:38+08:00
+date = 2024-08-18
 draft = false
 +++
 

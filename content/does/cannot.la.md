@@ -28,17 +28,15 @@ I'm also using it for a bunch of subdomains, like one to point people to other s
 
 ## Todos
 ### Site
-- Fix fonts
-  - Fix the font for code blocks
-    - The magick.css font doesn't load properly for some reason, it defaults to using a monospace system font that doesn't fit the theme
-  - Fix font for content formatted in `<pre>` tags
+- Configure Chroma highlighting style to match magick.css
+  - swapoff looks the best so far!
+- Fix hugo server not reloading everything after editing one file
+  - There's this weird behaviour where pages don't render properly after I edit the templates and forces me to save everything again.
+  - I've since resorted to having a `touch.sh` file which doesn't actually `touch`, but `echo`s a newline to every single file in content/ (including images!) and removes it again, which makes Hugo actually render stuff properly after you do that. It's a bit annoying to run it every update though, but oh well
 - Increase the loading speed
   - Maybe do stuff like minification, serve inline css, try TCP fast open, etc?
 - Site search (Ctrl + K?)
   - Add tags to posts (LLM?)
-- Fix hugo server not reloading everything after editing one file
-  - There's this weird behaviour where pages don't render properly after I edit the templates and forces me to save everything again.
-  - I've since resorted to having a `touch.sh` file which doesn't actually `touch`, but `echo`s a newline to every single file in content/ (including images!) and removes it again, which makes Hugo actually render stuff properly after you do that. It's a bit annoying to run it every update though, but oh well
 ### Content
 - Developer profile page, with a resume link
 - Hobby pages

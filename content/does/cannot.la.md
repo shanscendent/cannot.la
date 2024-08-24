@@ -26,6 +26,15 @@ After cycling through a free .fr domain gotten from a sketchy registrar, shansce
 
 I'm also using it for a bunch of subdomains, like one to point people to other selfhosted stuff from my homelab. It's patched together with a bunch of spit and tape at the moment so I'm going to have to revamp everything before I can do a writeup about it :(
 
+### Analytics
+After going through an (admittedly) unscientific skim of the available selfhosted options for web analytics{{< sidenote />}} for this site, I settled on [Shynet](https://github.com/milesmcc/shynet). Here's a list of all the options I went through, and why I chose Shynet over them. {{< sidenote >}}[Awesome-Selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted?tab=readme-ov-file#analytics){{< /sidenote >}}
+- [Shynet](https://github.com/milesmcc/shynet) - Lightweight, tracking pixel, sqlite support, looks nice
+- [Matomo](https://matomo.org/) - Hey, portainer uses it! Not lightweight though
+- [Goatcounter](https://www.goatcounter.com/) - Doesn't officially have Docker support, rough UI
+- [Plausible](https://plausible.io/) - Lightweight, but no tracking pixel
+- [Umami](https://umami.is/) - No tracking pixel?
+- [Fathom Lite](https://github.com/usefathom/fathom) - No tracking pixel
+
 ## Todos
 ### Site
 - Configure Chroma highlighting style to match magick.css

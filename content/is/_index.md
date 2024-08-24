@@ -17,7 +17,8 @@ layout = 'about'
 
 ## Credits
 
-CSS - <a target="_blank" href="https://css.winterveil.net/">magick.css</a>
+CSS - [magick.css](https://css.winterveil.net/)
 
-SSG - <a target="_blank" href="https://github.com/gohugoio/hugo">Hugo</a>
+SSG - [Hugo](https://github.com/gohugoio/hugo)
 
+Analytics - [Shynet](https://github.com/milesmcc/shynet) 

@@ -8,6 +8,37 @@
     filter: grayscale(0) contrast(1) brightness(1);
 }
 
+.image-bw-toast {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    transform: translate(0%, 0%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeOut 3s ease forwards;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.image-bw-container {
+    position: relative;
+    display: inline-block; /* Adjust size to fit the image */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .button-link {
     background-color: transparent; /* 1 */
     color: var(--fg); /* 1 */

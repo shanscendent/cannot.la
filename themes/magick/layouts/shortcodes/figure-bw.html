@@ -11,14 +11,17 @@
     {{- end -}}
   {{- end -}}
 
-  <img src="{{ $src }}"
-    {{- if or (.Get "alt") (.Get "caption") }}
-    alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
-    {{- end -}}
-    {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-    {{- with .Get "height" }} height="{{ . }}"{{ end -}}
-    {{- with .Get "loading" }} loading="{{ . }}"{{ end -}}
-  class="image-bw"><!-- Closing img tag -->
+  <div class="image-bw-container">
+    <img src="{{ $src }}"
+      {{- if or (.Get "alt") (.Get "caption") }}
+      alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+      {{- end -}}
+      {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+      {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+      {{- with .Get "loading" }} loading="{{ . }}"{{ end -}}
+    class="image-bw">
+    <div class="image-bw-toast"><small>Tap/Hover for color</small></div>
+  </div><!-- Closing img tag -->
   {{- if .Get "link" }}</a>{{ end -}}
   {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
     <figcaption>

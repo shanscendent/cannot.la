@@ -24,7 +24,7 @@ I settled on using [Hugo](https://gohugo.io/) as the SSG and [magick.css](https:
 ### Domain name
 After cycling through a free .fr domain gotten from a sketchy registrar, shanscendent.com and shanlee.cc, over the years, I finally settled on cannot.la{{< sidenote />}}, which I quite like! It's quirky enough and gives you a hint of where I'm from. {{< sidenote >}}If you're using namecheap, try using `COUPONFCNC` to get 20% off. [source](https://www.reddit.com/r/NameCheap/comments/11ygx2r/namecheap_coupon_20_off_permanent_code_couponfcnc/){{< /sidenote >}}
 
-I'm also using it for a bunch of subdomains, like one to point people to other selfhosted stuff from my homelab. It's patched together with a bunch of spit and tape at the moment so I'm going to have to revamp everything before I can do a writeup about it :(
+I'm also using it for a bunch of subdomains, like one to point people to other selfhosted stuff from my homelab.
 
 ### Analytics
 After going through an (admittedly) unscientific skim of the available selfhosted options for web analytics{{< sidenote />}} for this site, I settled on [Shynet](https://github.com/milesmcc/shynet). Here's a list of all the options I went through, and why I chose Shynet over them. {{< sidenote >}}[Awesome-Selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted?tab=readme-ov-file#analytics){{< /sidenote >}}
@@ -35,13 +35,28 @@ After going through an (admittedly) unscientific skim of the available selfhoste
 - [Umami](https://umami.is/) - No tracking pixel?
 - [Fathom Lite](https://github.com/usefathom/fathom) - No tracking pixel
 
+### Caught between a bug and a hard place{{< sidenote />}}
+{{< sidenote>}}I'm ashamed to report that I wasted **a lot** of time on this. {{< /sidenote >}}
+Right from the start of the project, I ran in to a problem where `hugo serve` would reload pages erratically—sometimes a page would show up in the site, sometimes it wouldn't, especially when I edited the templates—and it drove me crazy. The only solution I could come up with was having a `touch.sh` file which `echo`ed a newline to every single file in `content/` (including the images!) and removed it again, which I'd have to run every single time.
+
+I couldn't figure out what was going on for the longest time, until I found this [post](https://discourse.gohugo.io/t/when-developing-locally-i-have-to-manually-save-each-file-to-see-changes-every-time/39970).
+
+Here's how my content directory was arranged.
+```
+content
+├── index.md
+├── does
+│   ├── _index.md
+│   └── cannot.la.md
+```
+Turns out, if hugo sees `index.md` and not `_index.md` in a directory, it just stops looking for more subdirectories for content, as the `content/` directory is now a *leaf bundle*!
+
+Usually when I run into bugs, I'm stuck hunting for a missing underscore, but I've never had to look one in a filename before. I'll need to *RTFM* better next time.
+
 ## Todos
 ### Site
 - Configure Chroma highlighting style to match magick.css
   - swapoff looks the best so far!
-- Fix hugo server not reloading everything after editing one file
-  - There's this weird behaviour where pages don't render properly after I edit the templates and forces me to save everything again.
-  - I've since resorted to having a `touch.sh` file which doesn't actually `touch`, but `echo`s a newline to every single file in content/ (including images!) and removes it again, which makes Hugo actually render stuff properly after you do that. It's a bit annoying to run it every update though, but oh well
 - Increase the loading speed
   - Maybe do stuff like minification, serve inline css, try TCP fast open, etc?
 - Site search (Ctrl + K?)

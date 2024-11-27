@@ -43,7 +43,8 @@ These OS quirks can't be solved with third party apps, or it's just me complaini
 	- File copy behaviour is erratic
 	- Drives may completely lock up and refuse to work
 - Also, I don't like Finder
-	- No cut and paste
+	- No cut and paste (you can Cmd + C and Opt + Cmd + V instead to move, but it's so clunky to execute)
+	- Can't drag files without window focus. If you have 2 Finder windows open side by side, you can't just click and drag files immediately on the unfocused Finder, you have to waste another click to focus it before it lets you do it
 - Rename file is Return instead of F2?? Cmd + O is open instead??
 ## Remote access to Linux
 - ⁠I haven't been able to get X11 forwarding to work with XQuartz or Xpra.

@@ -1,7 +1,7 @@
 <figure>
-  <img src="{{ .Destination | safeURL }}" 
+  <img src="/{{ .Destination | safeURL }}" 
        alt="{{ .Text }}"
-       class="inverted">
+       class="figure-bw">
   <figcaption>
     {{ with .Title }}{{ . }}{{ end }}
   </figcaption>

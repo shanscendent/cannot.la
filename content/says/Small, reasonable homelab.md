@@ -9,4 +9,4 @@ A homelab is one or more servers that you set up at home and maintain for person
 If you look at the posts on [r/homelab](https://www.reddit.com/r/homelab/), you'd be inclined to think that you need server racks filled with enterprise hardware. Sure, they're powerful, but consumer hardware is enough for the vast majority of people. They're cheaper and consume way less electricity as well. Still, if you have the resources, space and you don't mind the low [SOAP](https://en.wikipedia.org/wiki/Wife_acceptance_factor), go wild!
 
 # Bare minimum
-![Basic Homelab](/images/basic_homelab.png "Homelab")
+![Basic Homelab](images/basic_homelab.png "Homelab")

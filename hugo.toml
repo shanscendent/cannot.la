@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Cannot Lah'
 theme = 'magick'
 enableGitInfo = true
+ignoreFiles = ['content/images/.*\.md$']
 
 [markup]
   [markup.goldmark]

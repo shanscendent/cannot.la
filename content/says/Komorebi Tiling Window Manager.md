@@ -1,8 +1,8 @@
-+++
-title = 'Komorebi Tiling Window Manager'
-date = 2024-11-28
-draft = false
-+++
+---
+title: Komorebi Tiling Window Manager
+date: 2024-11-28
+draft: false
+---
 
 Windows' virtual desktop feature is a hot mess. After struggling to configure AutoHotkey and DLLs to try and make virtual desktops work properly with shortcuts, I gave up and tried [Komorebi](https://lgug2z.github.io/komorebi/) instead, after disliking GlazeWM in the past. I have to say, it's been a pleasant experience!
 
@@ -77,6 +77,8 @@ Some extra [commands](https://lgug2z.github.io/komorebi/cli/quickstart.html) tha
 	- configure workspaces according to monitor order
 ### `komorebi.bar.json`
 It's nice out of the box, so I only changed the theme.
+### Window pinning
+
 # References
 - https://lgug2z.github.io/komorebi/installation.html
 - https://learn.microsoft.com/en-us/powershell/scripting/learn/shell/creating-profiles?view=powershell-7.4

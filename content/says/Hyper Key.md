@@ -1,8 +1,8 @@
-+++
-title = 'Hyper Key'
-date = 2024-11-24
-draft = false
-+++
+---
+title: Hyper Key
+date: 2024-11-24
+draft: false
+---
 
 A hyper key is a trigger to hold down all of the standard modifiers on your keyboard. 
 - macOS: ⌃ + ⌥ + ⇧ + ⌘
@@ -61,7 +61,7 @@ In addition to [AutoHotkey](https://www.autohotkey.com/), [PowerToys](https://le
 ## Disable the default shortcuts
 Windows actually has Ctrl + Alt + Shift + Win bound to Office by default. To disable it, follow the instructions in [OfficeKeyFix](https://github.com/acook/OfficeKeyFix)
 ## AutoHotkey
-Download and install AutoHotkey v2.0.
+Download and install AutoHotkey v2.0. I would recommend installing v1.1 first, then v2.0, as it lets you run scripts written for both versions at the same time on your PC.
 
 Create a folder somewhere on your system to store the AutoHotkey script, then create a `caps.ahk` file (credit to [D_Liver on SO](https://stackoverflow.com/questions/40435980/how-to-emulate-hyper-key-in-windows-10-using-autohotkey)).
 ```bash

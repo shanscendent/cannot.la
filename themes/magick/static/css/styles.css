@@ -54,3 +54,10 @@
 .center-text {
     text-align: center;
 }
+
+/* For dark mode, you might want to invert only in dark mode */
+@media (prefers-color-scheme: dark) {
+    .inverted {
+      filter: invert(100%);
+    }
+  }

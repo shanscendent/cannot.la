@@ -1,8 +1,8 @@
-+++
-title = 'magick.css Reference'
-date = 2024-08-18
-draft = false
-+++
+---
+title: magick.css Reference
+date: 2024-08-18
+draft: false
+---
 
 Recreated _some_ of the [magick.css](https://css.winterveil.net/) page in [hugo markdown](https://github.com/shanscendent/cannot.la/blob/main/content/says/magick.css.md) for reference. TODO: Move tedious stuff to hugo shortcodes
 

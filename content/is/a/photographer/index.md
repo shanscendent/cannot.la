@@ -1,8 +1,8 @@
-+++
-title = 'Photographer'
-date = 2024-08-18
-draft = false
-+++
+---
+title: Photographer
+date: 2024-08-18
+draft: false
+---
 
 I'm a hobbyist photographer. I take photos of cute animals, mostly, but I'm trying to expand my horizons!
 

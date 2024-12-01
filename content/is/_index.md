@@ -1,7 +1,7 @@
-+++
-title = 'Shan Is A'
-layout = 'about'
-+++
+---
+title: Shan Is A
+layout: about
+---
 
 <div class="center-text">
 "Jack of all trades, master of fun—whether it's coding, cooking, taking photos, or reading, I'm never done!"

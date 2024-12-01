@@ -1,9 +1,9 @@
-+++
-title = 'My Own Personal Site'
-slug = 'my-own-personal-site'
-date = 2024-08-18
-draft = false
-+++
+---
+title: My Own Personal Site
+slug: my-own-personal-site
+date: 2024-08-18
+draft: false
+---
 
 After a full year of owning the cannot.la domain (.la TLDs are quite pricey!) without having a personal site, I finally decided to sit down over the weekend to build this static site.
 

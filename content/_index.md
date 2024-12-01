@@ -1,8 +1,8 @@
-+++
-title = 'Cannot Lah'
-date = 2024-08-18
-draft = false
-+++
+---
+title: Cannot Lah
+date: 2024-08-18
+draft: false
+---
 
 <blockquote>
 

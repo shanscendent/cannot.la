@@ -1,8 +1,8 @@
-+++
-title = 'Macbook Recommendation'
-date = 2024-11-26
-draft = false
-+++
+---
+title: Macbook Recommendation
+date: 2024-11-26
+draft: false
+---
 
 Interested in picking up a Macbook to replace your developer laptop? Here's a list of pros and cons. Note that I'm coming from years of Windows (+ WSL) and don't have much experience daily driving Linux on my laptop.
 
@@ -38,6 +38,7 @@ I'm currently using a MBA M2 16G/512G, comparing the experience against my glaci
 	- I'm getting kernel panics and forced reboots 100% of the time if I interrupt the sleep process, which I suspect comes from a faulty display angle sensor
 ## OS
 These OS quirks can't be solved with third party apps, or it's just me complaining
+- There's no fractional display scaling, you _have_ to go with 1080p or 4k monitors, 1440p will look blurry and horrible no matter what you do
 - Fullscreen behaviour is horrible (creates a completely new space)
 - exFAT support is terrible
 	- File copy behaviour is erratic

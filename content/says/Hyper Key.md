@@ -102,6 +102,8 @@ To run this on startup, open the run dialog with Win + R, then type in `shell:st
 ### Customization
 - To switch to other hyper key variants, remove Shift or Win
 - Change the tap behaviour by changing the Esc key
+## Troubleshooting
+- In Windows, if Esc doesn't work, try changing the `A_PriorKey == "Capslock"` to `A_PriorKey == "CapsLock"`, depending on your AHK version.
 # References
 - https://zenmushie.medium.com/how-to-get-your-very-own-hyper-key-0c91ed4a84ff
 - https://github.com/Vonng/Capslock/blob/master/win/CapsLock.ahk

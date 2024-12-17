@@ -2,6 +2,7 @@
 title: Komorebi Tiling Window Manager
 date: 2024-11-28
 draft: false
+slug: komorebi
 ---
 
 Windows' virtual desktop feature is a hot mess. After struggling to configure AutoHotkey and DLLs to try and make virtual desktops work properly with shortcuts, I gave up and tried [Komorebi](https://lgug2z.github.io/komorebi/) instead, after disliking GlazeWM in the past. I have to say, it's been a pleasant experience!
@@ -19,7 +20,6 @@ First, enable long path support in a PowerShell window with admin rights
 ```PowerShell
 Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
 ```
-
 Then close that window
 
 Disable unnecessary system animations in Settings > Accessibility > Visual effects > Animation effects
@@ -68,7 +68,8 @@ Some extra [commands](https://lgug2z.github.io/komorebi/cli/quickstart.html) tha
 - focus-monitor
 - cycle-send-to-monitor
 ### `komorebi.json`
-- change `default_workspace_padding` and `default_container_padding` to 0, as big borders are distracting. You can reduce `border_width` as well
+- change `default_workspace_padding` and `default_container_padding` to `5`, as big borders are distracting. You can reduce `border_width` as well
+	- a value lower than `5` might break window sizing for some apps, especially if you have monitors with different DPIs
 - set `stackbar.mode` to `Never`, as it takes up a lot of space
 - you can customize `border_colours` and `theme`, refer to [catppuccin](https://catppuccin.com/palette) for palettes and colours
 - tiling [layouts](https://lgug2z.github.io/komorebi/example-configurations.html#layouts): my favourite workspace layout is `VerticalStack`, so I've set all of the workspaces (virtual desktops) to that instead
@@ -77,8 +78,11 @@ Some extra [commands](https://lgug2z.github.io/komorebi/cli/quickstart.html) tha
 	- configure workspaces according to monitor order
 ### `komorebi.bar.json`
 It's nice out of the box, so I only changed the theme.
-### Window pinning
+## Issue Fixes
+- If you're using a dock (especially a DisplayLink one), consider turning off USB battery saver in Settings > Bluetooth & devices > USB so komorebi doesn't break when you wake up from sleep
+- komorebi-bar processes don't seem to get killed with you run `komorebic stop`, so if you have a lot, use `Get-Process -Name komorebi-bar | Stop-Process -Force` to kill them
 
 # References
 - https://lgug2z.github.io/komorebi/installation.html
 - https://learn.microsoft.com/en-us/powershell/scripting/learn/shell/creating-profiles?view=powershell-7.4
+- https://github.com/LGUG2Z/komorebi/issues/841#issuecomment-2168184758

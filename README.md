@@ -20,10 +20,7 @@ To get started with setting up this Hugo site, follow these steps:
 
 ```bash
 hugo
-hugo --minify
-hugo server -D
-hugo server --disableFastRender --gc
-hugo new says/something.md
+hugo serve --noHTTPCache --cleanDestinationDir
 hugo config
 rsync -av --delete '/Users/shan/Library/CloudStorage/OneDrive-Personal/notes/shanalog/00 - Inbox/content'/ content/
 ```
